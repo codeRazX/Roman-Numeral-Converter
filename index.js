@@ -67,7 +67,7 @@ const handleConversion = (e)=>{
     resetError();
     
     const valueInput = Number(form.number.value.trim());
-    const romanNumber = handleConversion(valueInput);
+    const romanNumber = convertToRoman(valueInput);
     displayResults.textContent = romanNumber;
 }
 
