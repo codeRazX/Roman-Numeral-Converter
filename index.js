@@ -46,7 +46,7 @@ const validate = ()=>{
     return true;
 }
 
-const handleConversion = (arabicNumber)=>{
+const convertToRoman = (arabicNumber)=>{
     let result = "";
    
     for(let i = 0; i < romanNumerals.length; i++){
@@ -61,7 +61,7 @@ const handleConversion = (arabicNumber)=>{
 
     return result;
 }
-const convertToRoman = (e)=>{
+const handleConversion = (e)=>{
     e.preventDefault();
     if(!validate())return;
     resetError();
@@ -71,4 +71,4 @@ const convertToRoman = (e)=>{
     displayResults.textContent = romanNumber;
 }
 
-form.addEventListener("submit", convertToRoman);
+form.addEventListener("submit", handleConversion);
